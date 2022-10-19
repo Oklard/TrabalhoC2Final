@@ -1,4 +1,8 @@
-select c.cpf
+select c.idCarro
      , c.nome 
-  from clientes c
+     , c.cpf
+     , c.email
+     , c.telefone
+     , c.endereco
+  from cliente c
  order by c.nome

@@ -1,14 +1,19 @@
+from datetime import date
 class VendaVeiculo:
     def __init__(self, 
-                 idVenda:int=None
+                 idVenda:int=None,
+                 dataVenda:date=None
                  ):
         ### SETTERS ###
-        def set_idVenda(self, idVenda:int):
+        def set_idVenda(self, idVenda:int,dataVenda):
             self.idVenda = idVenda
+            self.dataVenda = dataVenda
         
         ### GETTERS ###
 
     def get_idVenda(self) -> int:
+        return self.codigo
+    def get_dataVenda(self) -> date:
         return self.codigo
 
     def to_string(self) -> str:

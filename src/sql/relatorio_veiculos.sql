@@ -1,4 +1,7 @@
-select prd.codigo_produto
-     , prd.descricao_produto 
-  from produtos prd
- order by prd.descricao_produto 
+select modelo
+     , ano
+     , chassis
+     , tipoCambio
+     , fabricante
+  from Veiculo
+ order by modelo

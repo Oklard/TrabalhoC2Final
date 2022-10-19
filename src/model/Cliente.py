@@ -1,4 +1,4 @@
-class cliente:
+class Cliente:
     def __init__(self,
                  idCliente:int=None,
                  nome:str=None,

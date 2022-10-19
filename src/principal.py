@@ -8,9 +8,9 @@ from controller.controller_VendaVeiculo import Controller_VendaVeiculo
 
 tela_inicial = SplashScreen()
 relatorio = Relatorio()
-ctrl_produto = Controller_Veiculo
+ctrl_Veiculo = Controller_Veiculo()
 ctrl_cliente = Controller_Cliente()
-ctrl_pedido = Controller_VendaVeiculo()
+ctrl_VendaVeiculo = Controller_VendaVeiculo()
 
 def reports(opcao_relatorio:int=0):
 
@@ -24,36 +24,36 @@ def reports(opcao_relatorio:int=0):
 def inserir(opcao_inserir:int=0):
 
     if opcao_inserir == 1:                               
-        novo_produto = ctrl_produto.inserir_veiculo()
+        novo_produto = ctrl_VendaVeiculo.inserir_veiculo()
     elif opcao_inserir == 2:
         novo_cliente = ctrl_cliente.inserir_cliente()
     elif opcao_inserir == 3:
-        nova_vendaVeiculo = ctrl_pedido.inserir_vendaVeiculo()
+        nova_venda = ctrl_VendaVeiculo.inserir_vendaVeiculo()
 
 def atualizar(opcao_atualizar:int=0):
 
     if opcao_atualizar == 1:
         relatorio.get_relatorio_veiculo()
-        produto_atualizado = ctrl_produto.atualizar_veiculo()
+        produto_atualizado = ctrl_Veiculo.atualizar_veiculo()
     elif opcao_atualizar == 2:
         relatorio.get_relatorio_cliente()
         cliente_atualizado = ctrl_cliente.atualizar_cliente()
         
     elif opcao_atualizar == 3:
         relatorio.get_relatorio_vendaVeiculo()
-        pedido_atualizado = ctrl_pedido.atualizar_vendaVeiculo()
+        venda_atualizada = ctrl_VendaVeiculo.atualizar_vendaVeiculo()  
 
 def excluir(opcao_excluir:int=0):
 
     if opcao_excluir == 1:
         relatorio.get_relatorio_veiculo
-        ctrl_produto.excluir_veiculo
+        ctrl_Veiculo.excluir_veiculo
     elif opcao_excluir == 2:                
         relatorio.get_relatorio_cliente()
         ctrl_cliente.excluir_cliente()
     elif opcao_excluir == 3:                
         relatorio.get_relatorio_vendaVeiculo()
-        ctrl_pedido.excluir_venda()
+        ctrl_Veiculo.excluir_venda()
 
 def run():
     print(tela_inicial.get_updated_screen())

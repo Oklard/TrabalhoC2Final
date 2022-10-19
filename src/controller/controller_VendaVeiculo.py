@@ -34,7 +34,7 @@ class Controller_VendaVeiculo:
             print(f"O idVenda {idVenda} já está cadastrado.")
             return None
 
-    def atualizar_cliente(self) -> VendaVeiculo:
+    def atualizar_venda(self) -> VendaVeiculo:
         # Cria uma nova conexão com o banco que permite alteração
         oracle = OracleQueries(can_write=True)
         oracle.connect()

@@ -1,14 +1,15 @@
+from pandas import DataFrame
 from conexion.oracle_queries import OracleQueries
 
 class Relatorio:
     def __init__(self):
         # Abre o arquivo com a consulta e associa a um atributo da classe
-        with open("sql/relatorio_vendaVeiculo.sql") as f:
-            self.query_relatorio_vendaVeiculo = f.read()
+        with open("sql/relatorio_veiculos.sql") as f:
+            self.query_relatorio_veiculo = f.read()
 
         # Abre o arquivo com a consulta e associa a um atributo da classe
-        with open("sql/relatorio_veiculo.sql") as f:
-            self.query_relatorio_veiculo = f.read()
+        with open("sql/relatorio_vendaVeiculo.sql") as f:
+            self.query_relatorio_vendaVeiculo = f.read()
 
         # Abre o arquivo com a consulta e associa a um atributo da classe
         with open("sql/relatorio_cliente.sql") as f:
